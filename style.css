@@ -1,0 +1,198 @@
+:root {
+    --main-bg-color: rgb(83,114,239);
+}
+
+body {
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+}
+
+.quote-zone {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 50%;
+    max-width: 700px;
+    border: 9px solid white;
+    border-radius: 24px;
+    padding: 20px;
+}
+
+#qofd {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    word-break: break-all;
+}
+
+#qofd span{
+    border-bottom: 4px solid var(--main-bg-color);
+}
+
+#author {
+    display: flex;
+    font-size: 18px;
+    margin-top: 20px;
+    font-style: oblique;
+    justify-content: flex-end;
+}
+
+#quote {
+    display: flex;
+    justify-content: center;
+    margin: 10% 10% 7%;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.barre {
+    width: 20px;
+    height: 2px;
+    background-color: var(--main-bg-color);
+    display: inline-block;
+    margin-left: 5px;
+
+}
+
+#line {
+    margin-top: 7%;
+    border: 1px dashed black;
+}
+
+#bottom {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#bottom ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+#bottom ul li {
+    margin-right: 20%;
+}
+
+/* copy button */
+#bottom .copy button {
+    background-color: #F2F7FA;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    overflow: hidden;
+    transition-duration: 700ms;
+    cursor: pointer;
+}
+
+#bottom .copy button span:first-child {
+    color: #0E418F;
+    position: absolute;
+    transform: translate(-50%, -50%)
+}
+
+#bottom .copy button span:last-child {
+    position: absolute;
+    color: #B5CCF3;
+    opacity: 0;
+    transform: translateY(100%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+}
+
+#bottom .copy button:focus {
+    background-color: var(--main-bg-color);
+    width: 120px;
+    height: 40px;
+    transition-delay: 100ms;
+    transition-duration: 500ms;
+}
+
+#bottom .copy button:focus span:first-child {
+    color: #B5CCF3;
+    transform: translateX(-50%) translateY(-150%);
+    opacity: 0;
+    transition-duration: 500ms;
+}
+
+#bottom .copy button:focus span:last-child {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+    transition-delay: 300ms;
+    transition-duration: 500ms;
+}
+
+#bottom .copy button:focus:end {
+    background-color: #FFFFFF;
+    width: 120px;
+    height: 40px;
+    transition-duration: 900ms;
+}
+
+#bottom .copy .centralize {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tweeter-icn {
+    border-radius: 20px; /* Ajoute des coins arrondis */
+    padding: 10px 20px; /* Ajoute un espace intérieur pour le contenu du bouton */
+    background-color: #3498db; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none; /* Supprime la bordure */
+    cursor: pointer; /* Change le curseur en main au survol pour indiquer qu'il est cliquable */
+    font-size: 16px; /* Taille du texte */
+}
+
+.tweeter-icn:hover {
+    background-color: #2980b9; /* Changement de couleur de fond au survol */
+}
+
+.tweeter-icn i {
+    margin-right: 5px; /* Espace entre l'icône et le texte */
+}
+
+.button-new-quote {
+    width: 100%;
+    height: 10%;
+    height: 50px;
+    /* padding-left: 30px; */
+    border: 2px solid white;
+    border-radius: 24px;
+    background-color: #dcdcdc;
+    font-weight: 30px;
+}
+
+
+/* .tweeter-img {
+    margin-left: 2%;
+    display: inline-block;
+    width: 8vw;
+    height: 8vw;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+} */
+
+/* .tweeter-img:hover {
+    background-color: blueviolet;
+} */
