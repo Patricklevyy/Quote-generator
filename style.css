@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color: rgb(83,114,239);
+    --main-bg-color: rgb(83, 114, 239);
 }
 
 body {
@@ -15,8 +15,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 55%;
-    height: 50%;
-    max-width: 700px;
+    height: 55%;
+    max-width: 750px;
     border: 9px solid white;
     border-radius: 24px;
     padding: 20px;
@@ -30,7 +30,7 @@ body {
     word-break: break-all;
 }
 
-#qofd span{
+#qofd span {
     border-bottom: 4px solid var(--main-bg-color);
 }
 
@@ -43,9 +43,11 @@ body {
 }
 
 #quote {
+    height: 120px; /* Limite de hauteur */
+    overflow-y: auto; /* Ajoute une barre de défilement si le texte est trop long */
     display: flex;
     justify-content: center;
-    margin: 10% 10% 7%;
+    margin: 7% 10% 7%;
     font-family: 'Playfair Display', serif;
     font-size: 25px;
     font-weight: 400;
@@ -58,7 +60,6 @@ body {
     background-color: var(--main-bg-color);
     display: inline-block;
     margin-left: 5px;
-
 }
 
 #line {
@@ -81,8 +82,29 @@ body {
     margin-right: 20%;
 }
 
-/* copy button */
-#bottom .copy button {
+/* bouton new quote */
+.button-new-quote {
+    width: 100%;
+    height: 40px; /* Ajustez la hauteur du bouton */
+    border: none;
+    border-radius: 10px;
+    background-color: var(--main-bg-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* .button-new-quote:hover {
+    background-color: #0E418F;
+} */
+
+.tweeter-icon button {
+    padding: 5px;
+}
+
+/* boutton pour copier la citation*/
+.copy button {
     background-color: #F2F7FA;
     width: 100px;
     height: 30px;
@@ -94,13 +116,13 @@ body {
     cursor: pointer;
 }
 
-#bottom .copy button span:first-child {
+.copy button span:first-child {
     color: #0E418F;
     position: absolute;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
 
-#bottom .copy button span:last-child {
+.copy button span:last-child {
     position: absolute;
     color: #B5CCF3;
     opacity: 0;
@@ -109,7 +131,7 @@ body {
     line-height: 13px;
 }
 
-#bottom .copy button:focus {
+.copy button:focus {
     background-color: var(--main-bg-color);
     width: 120px;
     height: 40px;
@@ -117,28 +139,28 @@ body {
     transition-duration: 500ms;
 }
 
-#bottom .copy button:focus span:first-child {
+.copy button:focus span:first-child {
     color: #B5CCF3;
     transform: translateX(-50%) translateY(-150%);
     opacity: 0;
     transition-duration: 500ms;
 }
 
-#bottom .copy button:focus span:last-child {
+.copy button:focus span:last-child {
     transform: translateX(-50%) translateY(-50%);
     opacity: 1;
     transition-delay: 300ms;
     transition-duration: 500ms;
 }
 
-#bottom .copy button:focus:end {
+.copy button:focus:end {
     background-color: #FFFFFF;
     width: 120px;
     height: 40px;
     transition-duration: 900ms;
 }
 
-#bottom .copy .centralize {
+.copy .centralize {
     width: 100%;
     height: 100%;
     display: flex;
@@ -147,14 +169,15 @@ body {
     text-align: center;
 }
 
+/* tweeter icone */
 .tweeter-icn {
-    border-radius: 20px; /* Ajoute des coins arrondis */
-    padding: 10px 20px; /* Ajoute un espace intérieur pour le contenu du bouton */
-    background-color: #3498db; /* Couleur de fond du bouton */
-    color: #fff; /* Couleur du texte du bouton */
-    border: none; /* Supprime la bordure */
-    cursor: pointer; /* Change le curseur en main au survol pour indiquer qu'il est cliquable */
-    font-size: 16px; /* Taille du texte */
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .tweeter-icn:hover {
@@ -165,16 +188,6 @@ body {
     margin-right: 5px; /* Espace entre l'icône et le texte */
 }
 
-.button-new-quote {
-    width: 100%;
-    height: 10%;
-    height: 50px;
-    /* padding-left: 30px; */
-    border: 2px solid white;
-    border-radius: 24px;
-    background-color: #dcdcdc;
-    font-weight: 30px;
-}
 
 
 /* .tweeter-img {
