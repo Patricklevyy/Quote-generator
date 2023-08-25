@@ -30,3 +30,10 @@ async function GetRandomQuotes(url) {
 }
 
 GetRandomQuotes(api_url);
+
+function MakeaTweet() {
+    var tweetText = encodeURIComponent(quote.innerHTML + "\n" + " ---- by " + authors.innerHTML);
+    var twitterURL = "https://twitter.com/intent/tweet?text=" + tweetText;
+
+    window.open(twitterURL, "TweeterWindow", "width=800, height=600");
+}
