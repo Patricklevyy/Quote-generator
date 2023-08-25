@@ -79,13 +79,13 @@ body {
 }
 
 #bottom ul li {
-    margin-right: 20%;
+    margin-right: 7%;
 }
 
 /* bouton new quote */
-.button-new-quote {
+/* .button-new-quote {
     width: 100%;
-    height: 40px; /* Ajustez la hauteur du bouton */
+    height: 40px;
     border: none;
     border-radius: 10px;
     background-color: var(--main-bg-color);
@@ -93,10 +93,6 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-/* .button-new-quote:hover {
-    background-color: #0E418F;
 } */
 
 .tweeter-icon button {
@@ -170,42 +166,14 @@ body {
 }
 
 /* tweeter icone */
-.tweeter-icn {
-    border-radius: 20px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+.tweeter-icon {
+    display:inline-block;
+    border:white 1px solid;
+    margin:2px;
+    font-size:20px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    border-radius:50%;
 }
 
-.tweeter-icn:hover {
-    background-color: #2980b9; /* Changement de couleur de fond au survol */
-}
-
-.tweeter-icn i {
-    margin-right: 5px; /* Espace entre l'icône et le texte */
-}
-
-
-
-/* .tweeter-img {
-    margin-left: 2%;
-    display: inline-block;
-    width: 8vw;
-    height: 8vw;
-    max-width: 50px;
-    max-height: 50px;
-    border-radius: 50%;
-    background-color: whitesmoke;
-    color: white;
-    font-size: 2vw;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
-} */
-
-/* .tweeter-img:hover {
-    background-color: blueviolet;
-} */
