@@ -1,28 +1,25 @@
-// const { response } = require("express");
+const authors = document.getElementById("author-name");
+const quote = document.getElementById("quote");
 
 function CopyQuote() {
-    var copyText = document.getElementById("quote");
+    if (quote && authors) {
+        const quoteText = quote.textContent;
+        const authorText = authors.textContent;
 
-    if (copyText) {
-        var range = document.createRange();
-        range.selectNode(copyText);
+        const copyText = quoteText + " --- by " + authorText;
 
-        var selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
+        const textArea = document.createElement("textarea");
+        textArea.value = copyText;
+        document.body.appendChild(textArea);
 
-        try {
-            document.execCommand('copy');
-        } catch (err) {
-            console.error("Erreur lors de la copie du texte : ", err);
-        }
+        textArea.select();
+        document.execCommand('copy');
 
-        selection.removeAllRanges();
+        document.body.removeChild(textArea);
     }
 }
 
-const authors = document.getElementById("author-name");
-const quote = document.getElementById("quote");
+
 const api_url = "https://api.quotable.io/random";
 
 async function GetRandomQuotes(url) {
